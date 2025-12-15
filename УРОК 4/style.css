@@ -1,0 +1,10 @@
+.form{
+    width: 200px;
+    border-radius: 50px;
+}
+.name{
+    display: block;
+}
+textarea{
+    resize: vertical;
+}
