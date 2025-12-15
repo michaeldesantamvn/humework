@@ -1,0 +1,18 @@
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+tr, td, caption, th{
+    font-family: sans-serif;
+    border: 1px solid black;
+}
+caption{
+    border-bottom: none;
+}
+.head{
+    font-weight: bold;
+}
+.holiday {
+    color: red;
+}
