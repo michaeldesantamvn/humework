@@ -1,0 +1,425 @@
+.catalog {
+    margin: 150px auto;
+    max-width: 1920px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.product__container {
+    max-width: 1920px;
+    width: 100%;
+    margin: 150px auto;
+    padding: 0 310px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.catalog__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.catalog__card {
+    border-radius: 5px;
+    box-shadow: 0 4px 41px 0 rgba(0, 0, 0, 0.05), 0 4px 41px 0 rgba(0, 0, 0, 0.05);
+    max-width: 325px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    transition: box-shadow var(--transition);
+    background-color: transparent;
+}
+
+/* Ховер эффект только для нижней части */
+.catalog__card:hover {
+    box-shadow: 0 8px 100px 0 rgba(0, 0, 0, 0.1), 0 8px 100px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Меняем фон только у нижней части при ховере карточки */
+.catalog__card:hover .card__inner {
+    background-color: var(--section-dark, #2c3e50);
+}
+
+/* Меняем цвет текста в нижней части при ховере */
+.catalog__card:hover .card__title,
+.catalog__card:hover .card__text {
+    color: var(--text-light, #ffffff);
+}
+
+/* Меняем цвет стрелки при ховере */
+.catalog__card:hover .card__control svg path {
+    fill: var(--text-light, #ffffff);
+}
+
+/* Анимация стрелки при ховере */
+.catalog__card:hover .card__control {
+    transform: translateX(8px);
+}
+
+/* Картинка не меняется при ховере */
+.catalog__card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 325/324;
+}
+
+/* Нижняя часть карточки */
+.card__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    min-height: 130px;
+    padding: 19px 20px 29px;
+    transition: background-color var(--transition), color var(--transition);
+    box-sizing: border-box;
+    background-color: transparent; /* Прозрачный фон по умолчанию */
+}
+
+.card__content {
+    width: 100%;
+    min-width: 0;
+}
+
+.card__title {
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 30px;
+    color: var(--text-dark);
+    transition: color var(--transition);
+    margin: 0;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.card__down {
+    display: flex;
+    align-items: center;
+    padding-top: 12px;
+    gap: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.card__text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--text-dark);
+    transition: color var(--transition);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 40px);
+}
+
+.card__control {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    transition: transform var(--transition);
+}
+
+.card__control svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.card__control svg path {
+    transition: fill var(--transition);
+}
+
+/* Десктопы (1200px - 1600px) */
+@media screen and (max-width: 1600px) {
+    .catalog {
+        margin: 120px auto;
+        padding: 0 30px;
+    }
+    
+    .product__container {
+        padding: 0 200px;
+    }
+    
+    .catalog__inner {
+        gap: 15px;
+    }
+    
+    .card__title {
+        font-size: 28px;
+    }
+    
+    .card__text {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .catalog {
+        margin: 100px auto;
+    }
+    
+    .product__container {
+        padding: 0 150px;
+    }
+    
+    .catalog__inner {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+    
+    .card__title {
+        font-size: 26px;
+    }
+    
+    .card__text {
+        font-size: 22px;
+    }
+    
+    .card__inner {
+        min-height: 120px;
+        padding: 15px 15px 20px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .catalog {
+        margin: 80px auto;
+        padding: 0 25px;
+    }
+    
+    .product__container {
+        padding: 0 100px;
+    }
+    
+    .catalog__inner {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+    .card__title {
+        font-size: 24px;
+    }
+    
+    .card__text {
+        font-size: 20px;
+    }
+    
+    .card__down {
+        gap: 12px;
+    }
+}
+
+/* Планшеты 992px - два ряда по 4 карточки */
+@media screen and (max-width: 992px) {
+    .catalog {
+        margin: 70px auto;
+        padding: 0 20px;
+    }
+    
+    .product__container {
+        padding: 0 40px; /* Уменьшаем отступы для планшетов */
+    }
+    
+    .catalog__inner {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+        gap: 15px;
+    }
+    
+    .catalog__card {
+        max-width: 100%; /* Карточки на всю ширину ячейки */
+    }
+    
+    .card__title {
+        font-size: 22px; /* Уменьшаем размер шрифта */
+    }
+    
+    .card__text {
+        font-size: 18px;
+    }
+    
+    .card__inner {
+        min-height: 100px;
+        padding: 12px 12px 18px;
+    }
+    
+    .card__down {
+        gap: 10px;
+        padding-top: 8px;
+    }
+    
+    .card__control {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Маленькие планшеты 768px - тоже два ряда по 4 карточки */
+@media screen and (max-width: 768px) {
+    .catalog {
+        margin: 60px auto;
+        padding: 0 15px;
+    }
+    
+    .product__container {
+        padding: 0 20px; /* Еще уменьшаем отступы */
+    }
+    
+    .catalog__inner {
+        grid-template-columns: repeat(4, 1fr); /* Все еще 4 колонки */
+        gap: 12px;
+    }
+    
+    .card__title {
+        font-size: 18px;
+    }
+    
+    .card__text {
+        font-size: 16px;
+    }
+    
+    .card__inner {
+        min-height: 85px;
+        padding: 10px 10px 14px;
+    }
+    
+    .card__down {
+        gap: 8px;
+        padding-top: 6px;
+    }
+    
+    .card__control {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Большие телефоны 600px - все еще 4 колонки */
+@media screen and (max-width: 600px) {
+    .catalog {
+        margin: 50px auto;
+        padding: 0 12px;
+    }
+    
+    .product__container {
+        padding: 0 15px;
+    }
+    
+    .catalog__inner {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+    
+    .card__title {
+        font-size: 16px;
+    }
+    
+    .card__text {
+        font-size: 14px;
+    }
+    
+    .card__inner {
+        min-height: 75px;
+        padding: 8px 8px 12px;
+    }
+    
+    .card__down {
+        gap: 6px;
+        padding-top: 5px;
+    }
+    
+    .card__control {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Средние телефоны 480px - переходим на 2 колонки, так как 4 уже слишком мелко */
+@media screen and (max-width: 480px) {
+    .catalog {
+        margin: 40px auto;
+        padding: 0 10px;
+    }
+    
+    .product__container {
+        padding: 0 15px;
+    }
+    
+    .catalog__inner {
+        grid-template-columns: repeat(2, 1fr); /* На телефонах 2 колонки */
+        gap: 15px;
+    }
+    
+    .card__title {
+        font-size: 18px;
+    }
+    
+    .card__text {
+        font-size: 16px;
+    }
+    
+    .card__inner {
+        min-height: 80px;
+        padding: 10px 10px 14px;
+    }
+    
+    .card__down {
+        gap: 8px;
+        padding-top: 6px;
+    }
+    
+    .card__control {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Маленькие телефоны 360px */
+@media screen and (max-width: 360px) {
+    .catalog {
+        margin: 30px auto;
+        padding: 0 8px;
+    }
+    
+    .product__container {
+        padding: 0 10px;
+    }
+    
+    .catalog__inner {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .card__title {
+        font-size: 16px;
+    }
+    
+    .card__text {
+        font-size: 14px;
+    }
+    
+    .card__inner {
+        min-height: 70px;
+        padding: 8px 8px 10px;
+    }
+    
+    .card__down {
+        gap: 5px;
+        padding-top: 4px;
+    }
+    
+    .card__control {
+        width: 16px;
+        height: 16px;
+    }
+}

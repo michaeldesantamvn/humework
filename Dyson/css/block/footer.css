@@ -1,0 +1,257 @@
+/* ===== FOOTER ===== */
+.footer {
+  background: #1a1a1a; /* var(--section-dark) */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer__container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 280px; /* Отступы как в других секциях */
+  box-sizing: border-box;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 60px 0 40px 0;
+}
+
+/* Логотип */
+.footer__logo {
+  margin-bottom: 20px;
+}
+
+.footer__logo-img {
+  height: auto;
+  display: block;
+}
+
+/* Колонки */
+.footer__columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  width: 100%;
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__column-title {
+  font-family: var(--second-family, 'Inter', sans-serif);
+  font-weight: 900;
+  font-size: 20px;
+  color: #fff;
+  margin: 0 0 25px 0;
+  line-height: 1.3;
+}
+
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.footer__item {
+  margin-bottom: 12px;
+}
+
+.footer__link {
+  font-family: var(--font-family, 'Arial', sans-serif);
+  font-weight: 300;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.2s;
+  line-height: 1.5;
+}
+
+.footer__link:hover {
+  color: #c5358c;
+  text-decoration: underline;
+}
+
+/* Контакты */
+.footer__contacts {
+  margin-top: 20px;
+}
+
+.footer__contacts .footer__column-title {
+  margin-bottom: 15px;
+}
+
+.footer__phone {
+  font-family: var(--font-family, 'Arial', sans-serif);
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: inline-block;
+}
+
+.footer__phone:hover {
+  color: #c5358c;
+}
+
+/* Нижняя часть */
+.footer__bottom {
+  padding: 25px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__copyright {
+  font-family: var(--font-family, 'Arial', sans-serif);
+  font-weight: 300;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  text-align: left;
+}
+
+/* ===== АДАПТАЦИЯ ===== */
+
+/* 1600px */
+@media screen and (max-width: 1600px) {
+  .footer__container {
+    padding: 0 200px;
+  }
+}
+
+/* 1400px */
+@media screen and (max-width: 1400px) {
+  .footer__container {
+    padding: 0 150px;
+  }
+  
+  .footer__columns {
+    gap: 30px;
+  }
+}
+
+/* 1200px */
+@media screen and (max-width: 1200px) {
+  .footer__container {
+    padding: 0 100px;
+  }
+  
+  .footer__columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  
+  .footer__column:last-child {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+/* 992px */
+@media screen and (max-width: 992px) {
+  .footer__container {
+    padding: 0 60px;
+  }
+  
+  .footer__columns {
+    gap: 30px;
+  }
+  
+  .footer__column-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .footer__link {
+    font-size: 15px;
+  }
+}
+
+/* 768px */
+@media screen and (max-width: 768px) {
+  .footer__container {
+    padding: 0 40px;
+  }
+  
+  .footer__content {
+    padding: 40px 0 30px 0;
+  }
+  
+  .footer__columns {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  
+  .footer__column:last-child {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .footer__column-title {
+    margin-bottom: 15px;
+  }
+  
+  .footer__item {
+    margin-bottom: 10px;
+  }
+  
+  .footer__copyright {
+    text-align: center;
+    font-size: 13px;
+  }
+}
+
+/* 480px */
+@media screen and (max-width: 480px) {
+  .footer__container {
+    padding: 0 20px;
+  }
+  
+  .footer__content {
+    padding: 30px 0 20px 0;
+    gap: 30px;
+  }
+  
+  .footer__column-title {
+    font-size: 18px;
+  }
+  
+  .footer__link {
+    font-size: 14px;
+  }
+  
+  .footer__phone {
+    font-size: 16px;
+  }
+  
+  .footer__bottom {
+    padding: 20px 0;
+  }
+}
+
+/* 360px */
+@media screen and (max-width: 360px) {
+  .footer__container {
+    padding: 0 15px;
+  }
+  
+  .footer__column-title {
+    font-size: 17px;
+  }
+  
+  .footer__link {
+    font-size: 13px;
+  }
+  
+  .footer__phone {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,413 @@
+.main__contact {
+    padding: 150px 0 114px;
+}
+
+.contact {
+    background: #f8f8f8;
+}
+
+.contact__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__title {
+    font-size: 42px;
+    color: #111;
+    margin-bottom: 50px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.contact__form {
+    width: 100%;
+}
+
+.contact__input {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    font-family: var(--action-text), sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #111;
+    background: transparent;
+    padding: 0 0 15px 0;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #111;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact__input:focus {
+    border-bottom-color: #c5358c;
+}
+
+.contact__input::placeholder {
+    font-family: var(--action-text), sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #ababab;
+}
+
+.contact__button {
+    display: inline-block;
+    font-family: var(--action-text), sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #fff;
+    background: #111;
+    border-radius: 3px;
+    padding: 16px 43px;
+    margin-top: 70px;
+    margin-bottom: 35px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.contact__button:hover {
+    background: #c5358c;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact__button:active {
+    transform: translateY(0);
+}
+
+.contact__label-check {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    cursor: pointer;
+    max-width: 400px;
+}
+
+.contact__label-check span {
+    font-family: var(--action-text), sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #000;
+    flex: 1;
+}
+
+.contact__check {
+    position: relative;
+    appearance: none;
+    border: 1px solid #111;
+    border-radius: 3px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.contact__check:hover {
+    border-color: #c5358c;
+}
+
+.contact__check:checked {
+    border-color: #c5358c;
+    background-color: rgba(197, 53, 140, 0.05);
+}
+
+.contact__check::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: url('../../icons/galka.svg') 50% 50% no-repeat;
+    background-size: 16px;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.contact__check:checked::before {
+    opacity: 1;
+}
+
+/* Изображение/контент справа */
+.contact__image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact__image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Адаптивность */
+
+/* Десктопы 1400px */
+@media screen and (max-width: 1400px) {
+    .main__contact {
+        padding: 120px 0 100px;
+    }
+    
+    .contact__inner {
+        gap: 30px;
+        padding: 0 30px;
+    }
+    
+    .contact__title {
+        font-size: 38px;
+        margin-bottom: 40px;
+    }
+}
+
+/* Маленькие десктопы 1200px */
+@media screen and (max-width: 1200px) {
+    .main__contact {
+        padding: 100px 0 80px;
+    }
+    
+    .contact__title {
+        font-size: 34px;
+        margin-bottom: 35px;
+    }
+    
+    .contact__input {
+        max-width: 350px;
+    }
+    
+    .contact__button {
+        font-size: 22px;
+        padding: 14px 38px;
+        margin-top: 50px;
+    }
+}
+
+/* Планшеты 992px */
+@media screen and (max-width: 992px) {
+    .main__contact {
+        padding: 80px 0 60px;
+    }
+    
+    .contact__inner {
+        grid-template-columns: 1fr; /* Одна колонка */
+        gap: 50px;
+        padding: 0 40px;
+    }
+    
+    .contact__item {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .contact__title {
+        font-size: 36px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    
+    .contact__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .contact__input {
+        max-width: 100%;
+        text-align: left;
+    }
+    
+    .contact__label-check {
+        max-width: 100%;
+        justify-content: flex-start;
+        text-align: left;
+    }
+    
+    .contact__button {
+        margin-top: 40px;
+        width: auto;
+        min-width: 250px;
+    }
+    
+    .contact__image {
+        order: -1; /* Изображение сверху на планшетах */
+        margin-bottom: 20px;
+    }
+    
+    .contact__image img {
+        max-width: 80%;
+    }
+}
+
+/* Мобильные 768px */
+@media screen and (max-width: 768px) {
+    .main__contact {
+        padding: 60px 0 50px;
+    }
+    
+    .contact__inner {
+        padding: 0 20px;
+        gap: 40px;
+    }
+    
+    .contact__title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    
+    .contact__input {
+        font-size: 16px;
+        padding-bottom: 12px;
+        margin-bottom: 25px;
+    }
+    
+    .contact__input::placeholder {
+        font-size: 16px;
+    }
+    
+    .contact__button {
+        font-size: 20px;
+        padding: 12px 35px;
+        min-width: 220px;
+        margin-top: 30px;
+        margin-bottom: 25px;
+    }
+    
+    .contact__label-check span {
+        font-size: 15px;
+    }
+    
+    .contact__check {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .contact__check::before {
+        background-size: 14px;
+    }
+    
+    .contact__image img {
+        max-width: 90%;
+    }
+}
+
+/* Маленькие мобильные 480px */
+@media screen and (max-width: 480px) {
+    .main__contact {
+        padding: 50px 0 40px;
+    }
+    
+    .contact__inner {
+        padding: 0 15px;
+        gap: 30px;
+    }
+    
+    .contact__title {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+    
+    .contact__input {
+        font-size: 15px;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .contact__input::placeholder {
+        font-size: 15px;
+    }
+    
+    .contact__button {
+        font-size: 18px;
+        padding: 10px 30px;
+        min-width: 200px;
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+    
+    .contact__label-check {
+        gap: 12px;
+    }
+    
+    .contact__label-check span {
+        font-size: 14px;
+    }
+    
+    .contact__check {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .contact__check::before {
+        background-size: 12px;
+    }
+}
+
+/* Очень маленькие экраны 360px */
+@media screen and (max-width: 360px) {
+    .contact__title {
+        font-size: 24px;
+    }
+    
+    .contact__input {
+        font-size: 14px;
+    }
+    
+    .contact__input::placeholder {
+        font-size: 14px;
+    }
+    
+    .contact__button {
+        font-size: 16px;
+        padding: 8px 25px;
+        min-width: 180px;
+    }
+    
+    .contact__label-check {
+        gap: 10px;
+    }
+    
+    .contact__label-check span {
+        font-size: 13px;
+    }
+    
+    .contact__check {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+/* Улучшение доступности */
+.contact__input:focus-visible,
+.contact__button:focus-visible,
+.contact__check:focus-visible {
+    outline: 2px solid #c5358c;
+    outline-offset: 2px;
+}
+
+/* Для устройств с наведением */
+@media (hover: hover) {
+    .contact__button:hover {
+        background: #c5358c;
+    }
+    
+    .contact__check:hover {
+        border-color: #c5358c;
+    }
+}

@@ -1,0 +1,261 @@
+/* ===== СЕКЦИЯ С ЗАГОЛОВКАМИ ===== */
+/* Скрываем секцию на десктопах (больше 992px) */
+@media (width > 992px) {
+    dop {
+        display: none;
+        }
+
+        .dop__title {
+            display: none;
+        }
+
+        /* Заголовок H2 */
+        .dop__title-2 {
+            display: none;
+        }
+
+        /* Заголовок H3 */
+        .dop__title-3 {
+            display: none;
+        }
+
+        /* Заголовок H4 */
+        .dop__title-4 {
+            display: none;
+        }
+
+        /* Заголовок H5 */
+        .dop__title-5 {
+            display: none;
+        }
+
+        /* Текст */
+        .dop__text {
+            display: none;
+        }
+}
+
+/* Показываем секцию только на планшетах и мобильных (992px и меньше) */
+@media screen and (max-width: 992px) {
+    section {
+        display: block;
+        max-width: 1920px;
+        margin: 0 auto;
+        padding: 60px 60px;
+        background: #fff;
+        box-sizing: border-box;
+    }
+
+    /* Заголовок H1 */
+    .dop__title {
+        font-family: var(--second-family, 'Montserrat', sans-serif);
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 1.2;
+        color: #111;
+        margin: 0 0 25px 0;
+        letter-spacing: -0.02em;
+        text-align: center;
+    }
+
+    /* Заголовок H2 */
+    .dop__title-2 {
+        font-family: var(--second-family, 'Montserrat', sans-serif);
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 1.2;
+        color: #111;
+        margin: 40px 0 20px 0;
+        letter-spacing: -0.01em;
+        text-align: center;
+    }
+
+    /* Заголовок H3 */
+    .dop__title-3 {
+        font-family: var(--second-family, 'Montserrat', sans-serif);
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.3;
+        color: #111;
+        margin: 35px 0 18px 0;
+        text-align: center;
+    }
+
+    /* Заголовок H4 */
+    .dop__title-4 {
+        font-family: var(--second-family, 'Montserrat', sans-serif);
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 1.3;
+        color: #111;
+        margin: 30px 0 15px 0;
+        text-align: center;
+    }
+
+    /* Заголовок H5 */
+    .dop__title-5 {
+        font-family: var(--second-family, 'Montserrat', sans-serif);
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1.4;
+        color: #111;
+        margin: 25px 0 12px 0;
+        text-align: center;
+    }
+
+    /* Текст */
+    .dop__text {
+        font-family: var(--font-family, 'Roboto', sans-serif);
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #555;
+        margin: 0 0 30px 0;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /* Последний текст без отступа снизу */
+    .dop__text:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+/* Дополнительная адаптация для меньших экранов */
+
+/* 768px */
+@media screen and (max-width: 768px) {
+    section {
+        padding: 50px 40px;
+    }
+    
+    .dop__title {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    
+    .dop__title-2 {
+        font-size: 28px;
+        margin: 35px 0 18px;
+    }
+    
+    .dop__title-3 {
+        font-size: 24px;
+        margin: 30px 0 15px;
+    }
+    
+    .dop__title-4 {
+        font-size: 22px;
+        margin: 25px 0 12px;
+    }
+    
+    .dop__title-5 {
+        font-size: 18px;
+        margin: 20px 0 10px;
+    }
+    
+    .dop__text {
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+}
+
+/* 600px */
+@media screen and (max-width: 600px) {
+    section {
+        padding: 40px 30px;
+    }
+    
+    .dop__title {
+        font-size: 28px;
+    }
+    
+    .dop__title-2 {
+        font-size: 26px;
+    }
+    
+    .dop__title-3 {
+        font-size: 22px;
+    }
+    
+    .dop__title-4 {
+        font-size: 20px;
+    }
+    
+    .dop__title-5 {
+        font-size: 18px;
+    }
+    
+    .dop__text {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+}
+
+/* 480px */
+@media screen and (max-width: 480px) {
+    section {
+        padding: 30px 20px;
+    }
+    
+    .dop__title {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+    
+    .dop__title-2 {
+        font-size: 24px;
+        margin: 25px 0 12px;
+    }
+    
+    .dop__title-3 {
+        font-size: 20px;
+        margin: 20px 0 10px;
+    }
+    
+    .dop__title-4 {
+        font-size: 18px;
+        margin: 15px 0 8px;
+    }
+    
+    .dop__title-5 {
+        font-size: 16px;
+        margin: 12px 0 6px;
+    }
+    
+    .dop__text {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+}
+
+/* 360px */
+@media screen and (max-width: 360px) {
+    section {
+        padding: 20px 15px;
+    }
+    
+    .dop__title {
+        font-size: 24px;
+    }
+    
+    .dop__title-2 {
+        font-size: 22px;
+    }
+    
+    .dop__title-3 {
+        font-size: 18px;
+    }
+    
+    .dop__title-4 {
+        font-size: 17px;
+    }
+    
+    .dop__title-5 {
+        font-size: 16px;
+    }
+    
+    .dop__text {
+        font-size: 13px;
+    }
+}
